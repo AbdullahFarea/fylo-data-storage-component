@@ -1,0 +1,177 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+}
+
+body {
+  font-size: 14px;
+  background: url(../images/bg-mobile.png) no-repeat;
+  background-size: cover;
+  background-color: #0c122c;
+  color: white;
+  min-width: 375px;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  max-width: 1440px;
+}
+
+.main {
+  width: 100%;
+  padding-block: 5em;
+  padding-inline: 2em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  align-items: center;
+  justify-content: center;
+}
+.main .top-card {
+  width: 100%;
+  background-color: #1d2c67;
+  padding: 2.5em;
+  border-radius: 0.5em;
+  border-top-right-radius: 6em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2em;
+}
+.main .top-card .list {
+  list-style: none;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+.main .top-card .list .list-item > .btn {
+  border: none;
+  background: #0c122c;
+  width: 3.5em;
+  height: 3.5em;
+  border-radius: 0.7em;
+  cursor: pointer;
+}
+.main .bottom-card {
+  background-color: #1d2c67;
+  width: 100%;
+  border-radius: 0.5em;
+  padding: 2.5em;
+  position: relative;
+}
+.main .bottom-card .title {
+  color: #dddbff;
+  font-size: 14px;
+  font-weight: 400;
+}
+.main .bottom-card .title span {
+  font-weight: 700;
+}
+.main .bottom-card .tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: #848794;
+  padding: 1em;
+  width: 11rem;
+  border-radius: 0.5em;
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.main .bottom-card .tooltip span {
+  font-size: 3em;
+  color: black;
+}
+.main .bottom-card .progress-container {
+  margin-top: 1em;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin-bottom: 1em;
+}
+.main .bottom-card .progress-container .progressbar {
+  width: 100%;
+  height: 1.25em;
+  padding-inline: 0.2em;
+  border-radius: 100vh;
+  background-color: #0c122c;
+  display: flex;
+  align-items: center;
+  grid-column: 1/-1;
+  margin-bottom: 0.5em;
+}
+.main .bottom-card .progress-container .progressbar-inner {
+  width: 81.5%;
+  height: 70%;
+  border-radius: 100vh;
+  background: linear-gradient(to right, #ffa399, #ff4d97);
+  position: relative;
+}
+.main .bottom-card .progress-container .progressbar-inner::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0.2em;
+  height: 0.7em;
+  width: 0.7em;
+  border-radius: 100%;
+  background-color: white;
+  transform: translateY(-50%);
+}
+.main .bottom-card .progress-container span {
+  font-weight: 700;
+}
+.main .bottom-card .progress-container .min {
+  justify-self: flex-start;
+}
+.main .bottom-card .progress-container .max {
+  justify-self: flex-end;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    background: url(../images/bg-desktop.png) no-repeat;
+    background-color: #0c122c;
+    background-position-y: bottom;
+    background-attachment: fixed;
+    display: g;
+  }
+
+  .main {
+    text-align: left;
+    flex-direction: row;
+    align-items: flex-end;
+  }
+  .main .top-card {
+    max-width: 22rem;
+  }
+  .main .bottom-card {
+    max-width: 33rem;
+  }
+  .main .bottom-card .tooltip {
+    top: -2rem;
+    left: 75%;
+  }
+  .main .bottom-card .tooltip::after {
+    content: "";
+    position: absolute;
+    border: 1rem solid white;
+    bottom: 0;
+    right: 0;
+    transform: translateY(80%);
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

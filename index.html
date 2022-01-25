@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- displays site properly based on user's device -->
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="./images/favicon-32x32.png"
+        />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./sass/style.css" />
+
+        <title>Frontend Mentor | Fylo data storage component</title>
+    </head>
+    <body>
+        <div class="container">
+            <main class="main">
+                <div class="top-card">
+                    <img class="logo" src="./images/logo.svg" alt="logo" />
+                    <div class="options">
+                        <ul class="list">
+                            <li class="list-item">
+                                <button class="document btn">
+                                    <img
+                                        src="./images/icon-document.svg"
+                                        alt="document icon"
+                                    />
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button class="folder btn">
+                                    <img
+                                        src="./images/icon-folder.svg"
+                                        alt="folder icon"
+                                    />
+                                </button>
+                            </li>
+                            <li class="list-item">
+                                <button class="upload btn">
+                                    <img
+                                        src="./images/icon-upload.svg"
+                                        alt="upload icon"
+                                    />
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <section class="bottom-card">
+                    <h1 class="title">
+                        You’ve used <span>815 GB</span> of your storage
+                    </h1>
+                    <div class="progress-container">
+                        <div class="progressbar">
+                            <div class="progressbar-inner"></div>
+                        </div>
+                        <span class="min">0 GB</span>
+                        <span class="max">1000 GB</span>
+                    </div>
+                    <div class="tooltip">
+                        <span>185</span>
+                        GB Left
+                    </div>
+                </section>
+            </main>
+        </div>
+    </body>
+</html>
